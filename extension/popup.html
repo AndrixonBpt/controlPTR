@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Canva Remote</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      width: 260px;
+      text-align: center;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      color: #2c3e50;
+      font-size: 16px;
+    }
+    .link-container {
+      margin: 15px 0;
+      padding: 10px;
+      background: #e9ecef;
+      border: 1px solid #dee2e6;
+      border-radius: 6px;
+      word-break: break-all;
+      font-size: 14px;
+      font-weight: bold;
+      color: #0056b3;
+    }
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #128C7E;
+    }
+    button:disabled {
+      background: #adb5bd;
+      cursor: not-allowed;
+    }
+    .status {
+      font-size: 12px;
+      color: #28a745;
+      margin-top: 10px;
+      min-height: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Control Remoto Canva</h3>
+  <p style="font-size: 12px; margin: 0; color: #666;">Enlace para tu móvil (WhatsApp):</p>
+  <div id="link-container" class="link-container">Conectando al servidor...</div>
+  <button id="copy-btn" disabled>Copiar enlace</button>
+  <div id="status" class="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

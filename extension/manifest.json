@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Canva Remote Control",
+  "version": "1.0",
+  "description": "Control de diapositivas de Canva remoto.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.canva.com/*"],
+      "js": ["socket.io.min.js", "content.js"]
+    }
+  ]
+}
