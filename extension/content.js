@@ -9,7 +9,7 @@ socket.on('connect', () => {
 
 socket.on('execute_command', (command) => {
   console.log("Canva Remote Control: Comando recibido ->", command);
-  
+
   if (command === 'next' || command === 'prev') {
     const key = command === 'next' ? 'ArrowRight' : 'ArrowLeft';
     const keyCode = command === 'next' ? 39 : 37;
@@ -26,7 +26,7 @@ socket.on('execute_command', (command) => {
       bubbles: true,
       cancelable: true
     });
-    
+
     const keyupEvent = new KeyboardEvent('keyup', {
       key: key,
       code: key,
@@ -39,7 +39,7 @@ socket.on('execute_command', (command) => {
     // Despachar los eventos
     target.dispatchEvent(keydownEvent);
     target.dispatchEvent(keyupEvent);
-    
+
     console.log(`Canva Remote Control: Evento de teclado '${key}' despachado en`, target);
   }
 });

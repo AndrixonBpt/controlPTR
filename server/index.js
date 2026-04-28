@@ -25,7 +25,7 @@ function determineLocalIpAddress() {
       socket.close();
       resolve(ip);
     });
-    
+
     socket.on('error', () => {
       socket.close();
       // Fallback a la forma antigua si no hay conexión a internet
@@ -65,7 +65,7 @@ io.on('connection', (socket) => {
   // Escuchar el evento 'send_command' del móvil
   socket.on('send_command', (command) => {
     console.log(`Comando recibido de ${socket.id}:`, command);
-    
+
     // Retransmitir a todos los clientes conectados (incluida la extensión)
     io.emit('execute_command', command);
   });
